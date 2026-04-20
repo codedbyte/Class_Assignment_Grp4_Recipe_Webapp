@@ -37,8 +37,7 @@
       </nav>
       <!--use this button to turn this header into a (if possible collapsible) side or top bar(navigation bar)-->
       <button class="hamburger" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu"> 
-        <span class="bar"></span>
-        <span class="bar"></span> <!-- Rada ya hii repetition -->
+        :<!--use js to make this a navigation icon-->
       </button>
     </div>
   </header>
@@ -95,17 +94,6 @@
             <li><button class="chip" data-difficulty="medium">Medium</button></li>
             <li><button class="chip" data-difficulty="hard">Hard</button></li>
           </ul>
-        </div>
-
-        <div class="sort-wrapper">
-          <label for="sort-select">Sort by:</label>
-          <select id="sort-select">
-            <option value="default">Default</option>
-            <option value="name-asc">Name A → Z</option>
-            <option value="name-desc">Name Z → A</option>
-            <option value="prep-asc">Quickest Prep First</option>
-            <option value="difficulty-asc">Easiest First</option>
-          </select>
         </div>
       </div>
     </section>
@@ -459,11 +447,11 @@
 
 
       <!--Here we get a description of each recipe,with details, ingredients, directions-->
-
+  <section id="recipe-details">
   <!-- 1. Pilau -->
-  <dialog id="modal-1" class="recipe-modal">
+  <article name="pilau" id="modal-1" class="recipe-modal">
     <div class="modal-inner">
-      <button class="modal-close">✕</button>
+      <button class="modal-close">✕</button> <!--make this a button to collapse the full details-->
       <header class="modal-header">
         <figure class="modal-image">
           <img src="assets/images/pilau.jpg" alt="A steaming pot of Kenyan Pilau" width="600" height="350" loading="lazy" />
@@ -514,12 +502,15 @@
           <li>Soaking the rice for 30 minutes before cooking gives fluffier results.</li>
         </ul>
       </section>
-      <button class="btn btn-favourite-modal" data-recipe-id="1"> Save to Favourites</button>
+      <span class="article-controls">
+        <button class="btn-favourite-modal" data-recipe-id="1"> Save to Favourites</button>
+        <button class="btn-return-home" data-recipe-id="1"><a href="#recipe-grid"> Return to Home</a></button>
+      </span>
     </div>
-  </dialog>
+  </article>
 
   <!-- 2. Nyama Choma -->
-  <dialog id="modal-2" class="recipe-modal">
+  <article name="nyama-choma" id="modal-2" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -564,12 +555,12 @@
           <li>Do not over-marinate; purists use only salt and lemon to let the meat speak for itself.</li>
         </ul>
       </section>
-      <button class="btn btn-favourite-modal" data-recipe-id="2"> Save to Favourites</button>
+      <button class="btn-favourite-modal" data-recipe-id="2"> Save to Favourites</button>
     </div>
-  </dialog>
+  </article>
 
   <!-- 3. Ugali & Sukuma Wiki -->
-  <dialog id="modal-3" class="recipe-modal">
+  <article name="ugali-sukuma-wiki" id="modal-3" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -609,12 +600,12 @@
           <li>Serve ugali moulded onto plates alongside the sukuma wiki.</li>
         </ol>
       </section>
-      <button class="btn btn-favourite-modal" data-recipe-id="3"> Save to Favourites</button>
+      <button class="btn-favourite-modal" data-recipe-id="3"> Save to Favourites</button>
     </div>
-  </dialog>
+  </article>
 
   <!-- 4. Githeri -->
-  <dialog id="modal-4" class="recipe-modal">
+  <article id="modal-4" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -648,12 +639,12 @@
           <li>Season with salt and pepper and serve hot.</li>
         </ol>
       </section>
-      <button class="btn btn-favourite-modal" data-recipe-id="4"> Save to Favourites</button>
+      <button class="btn-favourite-modal" data-recipe-id="4"> Save to Favourites</button>
     </div>
-  </dialog>
+  </article>
 
   <!-- 5. Mukimo -->
-  <dialog id="modal-5" class="recipe-modal">
+  <article id="modal-5" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -690,10 +681,10 @@
       </section>
       <button class="btn btn-favourite-modal" data-recipe-id="5"> Save to Favourites</button>
     </div>
-  </dialog>
+  </article>
 
   <!-- 6. Biryani -->
-  <dialog id="modal-6" class="recipe-modal">
+  <article id="modal-6" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -738,10 +729,10 @@
       </section>
       <button class="btn btn-favourite-modal" data-recipe-id="6"> Save to Favourites</button>
     </div>
-  </dialog>
+  </article>
 
   <!-- 7. Mandazi -->
-  <dialog id="modal-7" class="recipe-modal">
+  <article id="modal-7" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -780,10 +771,10 @@
       </section>
       <button class="btn btn-favourite-modal" data-recipe-id="7"> Save to Favourites</button>
     </div>
-  </dialog>
+  </article>
 
   <!-- 8. Chapati -->
-  <dialog id="modal-8" class="recipe-modal">
+  <article id="modal-8" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -819,10 +810,10 @@
       </section>
       <button class="btn btn-favourite-modal" data-recipe-id="8">Save to Favourites</button>
     </div>
-  </dialog>
+  </article>
 
   <!-- 9. Samosa -->
-  <dialog id="modal-9" class="recipe-modal">
+  <article id="modal-9" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -862,10 +853,10 @@
       </section>
       <button class="btn btn-favourite-modal" data-recipe-id="9"> Save to Favourites</button>
     </div>
-  </dialog>
+  </article>
 
   <!-- 10. Matoke -->
-  <dialog id="modal-10" class="recipe-modal">
+  <article id="modal-10" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -903,10 +894,10 @@
       </section>
       <button class="btn btn-favourite-modal" data-recipe-id="10"> Save to Favourites</button>
     </div>
-  </dialog>
+  </article>
 
   <!-- 11. Kachumbari -->
-  <dialog id="modal-11" class="recipe-modal">
+  <article id="modal-11" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -942,10 +933,10 @@
       </section>
       <button class="btn btn-favourite-modal" data-recipe-id="11"> Save to Favourites</button>
     </div>
-  </dialog>
+  </article>
 
   <!-- 12. Fish Fry -->
-  <dialog id="modal-12" class="recipe-modal">
+  <article id="modal-12" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -982,10 +973,10 @@
       </section>
       <button class="btn btn-favourite-modal" data-recipe-id="12"> Save to Favourites</button>
     </div>
-  </dialog>
+  </article>
 
   <!-- 13. Coconut Rice -->
-  <dialog id="modal-13" class="recipe-modal">
+  <article id="modal-13" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -1019,10 +1010,10 @@
       </section>
       <button class="btn btn-favourite-modal" data-recipe-id="13"> Save to Favourites</button>
     </div>
-  </dialog>
+  </article>
 
   <!-- 14. Beef Stew -->
-  <dialog id="modal-14" class="recipe-modal">
+  <article id="modal-14" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -1061,10 +1052,10 @@
       </section>
       <button class="btn btn-favourite-modal" data-recipe-id="14"> Save to Favourites</button>
     </div>
-  </dialog>
+  </article>
 
   <!-- 15. Fried Tilapia -->
-  <dialog id="modal-15" class="recipe-modal">
+  <article id="modal-15" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -1098,10 +1089,10 @@
       </section>
       <button class="btn btn-favourite-modal" data-recipe-id="15"> Save to Favourites</button>
     </div>
-  </dialog>
+  </article>
 
   <!-- 16. Arrowroots (Nduma) -->
-  <dialog id="modal-16" class="recipe-modal">
+  <article id="modal-16" class="recipe-modal">
     <div class="modal-inner">
       <button class="modal-close">✕</button>
       <header class="modal-header">
@@ -1134,8 +1125,8 @@
       </section>
       <button class="btn btn-favourite-modal" data-recipe-id="16"> Save to Favourites</button>
     </div>
-  </dialog>
-
+  </article>
+  </section>
   </main>
 
   
